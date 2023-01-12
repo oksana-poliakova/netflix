@@ -9,23 +9,51 @@
 /* Begin PBXBuildFile section */
 		FA633AF3296FFDA30039B373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633AF2296FFDA30039B373 /* AppDelegate.swift */; };
 		FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633AF4296FFDA30039B373 /* SceneDelegate.swift */; };
-		FA633AF7296FFDA30039B373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633AF6296FFDA30039B373 /* ViewController.swift */; };
-		FA633AFA296FFDA30039B373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA633AF8296FFDA30039B373 /* Main.storyboard */; };
 		FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA633AFB296FFDA30039B373 /* Nexflix.xcdatamodeld */; };
 		FA633AFF296FFDA40039B373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA633AFE296FFDA40039B373 /* Assets.xcassets */; };
 		FA633B02296FFDA40039B373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA633B00296FFDA40039B373 /* LaunchScreen.storyboard */; };
+		FA633B1B29700C420039B373 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B1A29700C420039B373 /* AppColors.swift */; };
+		FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B1C29700F500039B373 /* AppCoordinator.swift */; };
+		FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B1F29700F8C0039B373 /* Coordinator.swift */; };
+		FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B212970305E0039B373 /* OnboardingViewController.swift */; };
+		FA633B24297034740039B373 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B23297034740039B373 /* TabBarViewController.swift */; };
+		FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B25297035480039B373 /* OnboardingCoordinator.swift */; };
+		FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B28297036160039B373 /* UIStackView+Extensions.swift */; };
+		FA633B2B2970372F0039B373 /* LabelFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B2A2970372F0039B373 /* LabelFontStyles.swift */; };
+		FA633B31297039480039B373 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2D297039480039B373 /* Inter-Medium.ttf */; };
+		FA633B32297039480039B373 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2E297039480039B373 /* Inter-Light.ttf */; };
+		FA633B33297039480039B373 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2F297039480039B373 /* Inter-Bold.ttf */; };
+		FA633B34297039480039B373 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B30297039480039B373 /* Inter-Regular.ttf */; };
+		FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B35297046BD0039B373 /* BaseTextButton.swift */; };
+		FA633B3829705BC40039B373 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3729705BC40039B373 /* PrivacyViewController.swift */; };
+		FA633B3A29705BD30039B373 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3929705BD30039B373 /* SignInViewController.swift */; };
+		FA633B3C297064F10039B373 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3B297064F10039B373 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA633AEF296FFDA30039B373 /* Nexflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nexflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA633AF2296FFDA30039B373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA633AF4296FFDA30039B373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA633AF6296FFDA30039B373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA633AF9296FFDA30039B373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA633AFC296FFDA30039B373 /* Nexflix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nexflix.xcdatamodel; sourceTree = "<group>"; };
 		FA633AFE296FFDA40039B373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA633B01296FFDA40039B373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA633B03296FFDA40039B373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA633B1A29700C420039B373 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		FA633B1C29700F500039B373 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FA633B1F29700F8C0039B373 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FA633B212970305E0039B373 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FA633B23297034740039B373 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FA633B25297035480039B373 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		FA633B28297036160039B373 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B2A2970372F0039B373 /* LabelFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFontStyles.swift; sourceTree = "<group>"; };
+		FA633B2D297039480039B373 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		FA633B2E297039480039B373 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		FA633B2F297039480039B373 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		FA633B30297039480039B373 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		FA633B35297046BD0039B373 /* BaseTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextButton.swift; sourceTree = "<group>"; };
+		FA633B3729705BC40039B373 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		FA633B3929705BD30039B373 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FA633B3B297064F10039B373 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +86,158 @@
 		FA633AF1296FFDA30039B373 /* Nexflix */ = {
 			isa = PBXGroup;
 			children = (
-				FA633AF2296FFDA30039B373 /* AppDelegate.swift */,
-				FA633AF4296FFDA30039B373 /* SceneDelegate.swift */,
-				FA633AF6296FFDA30039B373 /* ViewController.swift */,
-				FA633AF8296FFDA30039B373 /* Main.storyboard */,
-				FA633AFE296FFDA40039B373 /* Assets.xcassets */,
+				FA633B0B2970052B0039B373 /* Application */,
+				FA633B0F2970058A0039B373 /* Coordinator */,
+				FA633B1E29700F7A0039B373 /* Protocols */,
+				FA633B0E2970056F0039B373 /* NetworkService */,
+				FA633B10297005990039B373 /* Core */,
+				FA633B0C2970054E0039B373 /* Extensions */,
+				FA633B09297005000039B373 /* CoreData */,
+				FA633B0A2970050F0039B373 /* Resources */,
 				FA633B00296FFDA40039B373 /* LaunchScreen.storyboard */,
-				FA633B03296FFDA40039B373 /* Info.plist */,
-				FA633AFB296FFDA30039B373 /* Nexflix.xcdatamodeld */,
 			);
 			path = Nexflix;
+			sourceTree = "<group>";
+		};
+		FA633B09297005000039B373 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FA633AFB296FFDA30039B373 /* Nexflix.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FA633B0A2970050F0039B373 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B2C297039480039B373 /* Fonts */,
+				FA633B03296FFDA40039B373 /* Info.plist */,
+				FA633AFE296FFDA40039B373 /* Assets.xcassets */,
+				FA633B14297006FA0039B373 /* Colors */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA633B0B2970052B0039B373 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FA633AF2296FFDA30039B373 /* AppDelegate.swift */,
+				FA633AF4296FFDA30039B373 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FA633B0C2970054E0039B373 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B28297036160039B373 /* UIStackView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA633B0E2970056F0039B373 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		FA633B0F2970058A0039B373 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B1C29700F500039B373 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FA633B10297005990039B373 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B3D29706C330039B373 /* Controllers */,
+				FA633B172970079D0039B373 /* Models */,
+				FA633B27297035A20039B373 /* Onboarding */,
+				FA633B18297007AF0039B373 /* Views */,
+				FA633B12297005D10039B373 /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FA633B12297005D10039B373 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FA633B14297006FA0039B373 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B1A29700C420039B373 /* AppColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		FA633B172970079D0039B373 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA633B18297007AF0039B373 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B2A2970372F0039B373 /* LabelFontStyles.swift */,
+				FA633B35297046BD0039B373 /* BaseTextButton.swift */,
+				FA633B19297007BD0039B373 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA633B19297007BD0039B373 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA633B1E29700F7A0039B373 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B1F29700F8C0039B373 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA633B27297035A20039B373 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B25297035480039B373 /* OnboardingCoordinator.swift */,
+				FA633B212970305E0039B373 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FA633B2C297039480039B373 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B2D297039480039B373 /* Inter-Medium.ttf */,
+				FA633B2E297039480039B373 /* Inter-Light.ttf */,
+				FA633B2F297039480039B373 /* Inter-Bold.ttf */,
+				FA633B30297039480039B373 /* Inter-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA633B3D29706C330039B373 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B23297034740039B373 /* TabBarViewController.swift */,
+				FA633B3729705BC40039B373 /* PrivacyViewController.swift */,
+				FA633B3929705BD30039B373 /* SignInViewController.swift */,
+				FA633B3B297064F10039B373 /* PageViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA633B02296FFDA40039B373 /* LaunchScreen.storyboard in Resources */,
+				FA633B33297039480039B373 /* Inter-Bold.ttf in Resources */,
 				FA633AFF296FFDA40039B373 /* Assets.xcassets in Resources */,
-				FA633AFA296FFDA30039B373 /* Main.storyboard in Resources */,
+				FA633B32297039480039B373 /* Inter-Light.ttf in Resources */,
+				FA633B34297039480039B373 /* Inter-Regular.ttf in Resources */,
+				FA633B31297039480039B373 /* Inter-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +314,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA633AF7296FFDA30039B373 /* ViewController.swift in Sources */,
+				FA633B3A29705BD30039B373 /* SignInViewController.swift in Sources */,
+				FA633B24297034740039B373 /* TabBarViewController.swift in Sources */,
 				FA633AF3296FFDA30039B373 /* AppDelegate.swift in Sources */,
+				FA633B3829705BC40039B373 /* PrivacyViewController.swift in Sources */,
+				FA633B1B29700C420039B373 /* AppColors.swift in Sources */,
+				FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */,
+				FA633B3C297064F10039B373 /* PageViewController.swift in Sources */,
+				FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */,
+				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
+				FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */,
+				FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */,
+				FA633B2B2970372F0039B373 /* LabelFontStyles.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
+				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA633AF8296FFDA30039B373 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA633AF9296FFDA30039B373 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA633B00296FFDA40039B373 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +470,9 @@
 				DEVELOPMENT_TEAM = A55B4JSB5L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nexflix/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,9 +498,9 @@
 				DEVELOPMENT_TEAM = A55B4JSB5L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Nexflix/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
