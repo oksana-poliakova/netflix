@@ -11,18 +11,18 @@ final class OnboardingContentViewController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var screenImageView: UIImageView = {
+    private let screenImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private lazy var titleLabel: BaseLabel = {
+    private let titleLabel: BaseLabel = {
         let label = BaseLabel(type: .mediumHeader)
         return label
     }()
     
-    private lazy var subtitleLabel: BaseLabel = {
+    private let subtitleLabel: BaseLabel = {
         let label = BaseLabel(type: .medium(fontSize: 18))
         return label
     }()

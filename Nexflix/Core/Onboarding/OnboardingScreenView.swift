@@ -22,7 +22,6 @@ final class OnboardingScreenView: UIView {
                                                     subtitle: "Join today, cancel anytime",
                                                     image: UIImage(named: "onboarding3"))]
     
-    
     private var pageViewController: UIPageViewController?
     private var pageControll: UIPageControl = UIPageControl(frame: .zero)
     private var pageViewControllers: [OnboardingContentViewController] = []

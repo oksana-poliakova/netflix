@@ -11,7 +11,7 @@ final class OnboardingViewController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
         imageView.tintColor = AppColors.primaryRed
@@ -22,12 +22,14 @@ final class OnboardingViewController: UIViewController {
     private lazy var privacyButton: BaseTextButton = {
         let button = BaseTextButton(type: .light(fontSize: 16))
         button.setTextLabel(text: "Privacy")
+        button.addTarget(self, action: #selector(tappedPrivacyButton), for: .touchUpInside)
         return button
     }()
     
     private lazy var signInButton: BaseTextButton = {
         let button = BaseTextButton(type: .light(fontSize: 16))
         button.setTextLabel(text: "Sign In")
+        button.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
         return button
     }()
     
@@ -42,6 +44,7 @@ final class OnboardingViewController: UIViewController {
         button.tintColor = AppColors.white
         button.layer.cornerRadius = 2
         button.setTitle("Get Started", for: .normal)
+        button.addTarget(self, action: #selector(tappedGetStartedButton), for: .touchUpInside)
         return button
     }()
     
@@ -64,7 +67,6 @@ final class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        addTarget()
     }
     
     // MARK: - SetupUI
@@ -100,14 +102,6 @@ final class OnboardingViewController: UIViewController {
             getStartedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideConstraint),
             getStartedButton.heightAnchor.constraint(equalToConstant: 48)
         ])
-    }
-    
-    // MARK: - Adding target to buttons
-    
-    private func addTarget() {
-        privacyButton.addTarget(self, action: #selector(tappedPrivacyButton), for: .touchUpInside)
-        signInButton.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
-        getStartedButton.addTarget(self, action: #selector(tappedGetStartedButton), for: .touchUpInside)
     }
     
     // MARK: - Actions
