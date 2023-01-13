@@ -32,10 +32,20 @@ final class OnboardingViewController: UIViewController {
     }()
     
     private lazy var buttonStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [privacyButton, signInButton], axis: .horizontal, spacing: 14, distribution: .fill, aligment: .fill)
+        let stackView = UIStackView(arrangedSubviews: [privacyButton, signInButton], axis: .horizontal, spacing: 16, distribution: .fill, aligment: .fill)
         return stackView
     }()
     
+    private lazy var getStartedButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = AppColors.primaryRed
+        button.tintColor = AppColors.white
+        button.layer.cornerRadius = 2
+        button.setTitle("Get Started", for: .normal)
+        return button
+    }()
+    
+    private let onboardingScreenView = OnboardingScreenView()
     private let sideConstraint: CGFloat = 16
     
     // MARK: - Init
@@ -52,8 +62,9 @@ final class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         
+        setupUI()
+        addTarget()
     }
     
     // MARK: - SetupUI
@@ -63,7 +74,7 @@ final class OnboardingViewController: UIViewController {
         view.backgroundColor = AppColors.black
         
         // Appearance
-        [logoImageView, buttonStackView].forEach {
+        [logoImageView, buttonStackView, onboardingScreenView, getStartedButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -75,13 +86,28 @@ final class OnboardingViewController: UIViewController {
             logoImageView.widthAnchor.constraint(equalToConstant: 86),
             logoImageView.heightAnchor.constraint(equalToConstant: 22),
             
-            buttonStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            buttonStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 6),
             buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideConstraint),
+            
+            onboardingScreenView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 60),
+            onboardingScreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            onboardingScreenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            onboardingScreenView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            onboardingScreenView.bottomAnchor.constraint(equalTo: getStartedButton.topAnchor, constant: -16),
+            
+            getStartedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -14),
+            getStartedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: sideConstraint),
+            getStartedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideConstraint),
+            getStartedButton.heightAnchor.constraint(equalToConstant: 48)
         ])
-        
-        // Adding targets to buttons
+    }
+    
+    // MARK: - Adding target to buttons
+    
+    private func addTarget() {
         privacyButton.addTarget(self, action: #selector(tappedPrivacyButton), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
+        getStartedButton.addTarget(self, action: #selector(tappedGetStartedButton), for: .touchUpInside)
     }
     
     // MARK: - Actions
@@ -94,5 +120,10 @@ final class OnboardingViewController: UIViewController {
     @objc func tappedSignInButton() {
         guard let navigationController = navigationController else { return }
         OnboardingCoordinator(navigationController: navigationController).pressedSignInButton()
+    }
+    
+    @objc func tappedGetStartedButton() {
+        guard let navigationController = navigationController else { return }
+        OnboardingCoordinator(navigationController: navigationController).pressedGetStartedButton()
     }
 }

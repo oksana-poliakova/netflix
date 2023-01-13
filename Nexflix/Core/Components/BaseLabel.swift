@@ -13,9 +13,9 @@ import UIKit
 enum LabelFontStyle {
     case light(fontSize: CGFloat)
     case lightHeader
-    case medium
+    case medium(fontSize: CGFloat)
     case mediumHeader
-    case bold
+    case bold(fontSize: CGFloat)
     case boldHeader
 }
 
@@ -23,7 +23,7 @@ final class BaseLabel: UILabel {
     
     // MARK: - Init
     
-    init(type: LabelFontStyle = .medium) {
+    init(type: LabelFontStyle = .medium(fontSize: 16)) {
         super.init(frame: .zero)
         applyLabelFontStyles(type: type)
     }
@@ -32,7 +32,7 @@ final class BaseLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Styles for label
+    // MARK: - Styles for labels
     
     private func applyLabelFontStyles(type: LabelFontStyle) {
         textColor = AppColors.white
@@ -42,19 +42,19 @@ final class BaseLabel: UILabel {
         
         switch type {
         case .light(let fontSize):
-            font = UIFont(name: "Inter-Light.ttf", size: fontSize)
+            font = UIFont(name: "Inter-Light", size: fontSize)
         case .lightHeader:
-            font = UIFont(name: "Inter-Light.ttf", size: 32)
+            font = UIFont(name: "Inter-Light", size: 32)
             textAlignment = .center
         case .medium:
-            font = UIFont(name: "Inter-Medium.ttf", size: 16)
+            font = UIFont(name: "Inter-Medium", size: 16)
         case .mediumHeader:
-            font = UIFont(name: "Inter-Light.ttf", size: 32)
+            font = UIFont(name: "Inter-Medium", size: 32)
             textAlignment = .center
         case .bold:
-            font = UIFont(name: "Inter-Bold.ttf", size: 16)
+            font = UIFont(name: "Inter-Bold", size: 16)
         case .boldHeader:
-            font = UIFont(name: "Inter-Light.ttf", size: 32)
+            font = UIFont(name: "Inter-Bold", size: 32)
             textAlignment = .center
         }
     }

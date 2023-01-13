@@ -7,9 +7,10 @@
 
 import UIKit
 
-// MARK: - Adding arranged subviews to the stackView with property initialization
-
 extension UIStackView {
+    
+    // MARK: - Adding arranged subviews to the stackView with property initialization
+
     convenience init(arrangedSubviews: [UIView], axis: NSLayoutConstraint.Axis, spacing: CGFloat, distribution: UIStackView.Distribution, aligment: UIStackView.Alignment) {
         self.init(arrangedSubviews: arrangedSubviews)
         self.axis = axis

@@ -21,6 +21,8 @@ final class AppCoordinator: Coordinator {
         self.window = window
     }
     
+    // MARK: - Functions
+    
     func start() {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

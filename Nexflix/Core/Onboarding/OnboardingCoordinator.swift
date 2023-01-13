@@ -9,15 +9,19 @@ import UIKit
 
 final class OnboardingCoordinator: Coordinator {
     
+    // MARK: - Properties
+    
     var navigationController: UINavigationController
+    
+    // MARK: - Init
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
-        
-    }
+    // MARK: - Functions
+    
+    func start() { }
     
     func pressedPrivacyButton() {
         let vc = PrivacyViewController()
@@ -27,5 +31,9 @@ final class OnboardingCoordinator: Coordinator {
     func pressedSignInButton() {
         let vc = SignInViewController()
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func pressedGetStartedButton() {
+        
     }
 }

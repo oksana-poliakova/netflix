@@ -19,7 +19,7 @@
 		FA633B24297034740039B373 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B23297034740039B373 /* TabBarViewController.swift */; };
 		FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B25297035480039B373 /* OnboardingCoordinator.swift */; };
 		FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B28297036160039B373 /* UIStackView+Extensions.swift */; };
-		FA633B2B2970372F0039B373 /* LabelFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B2A2970372F0039B373 /* LabelFontStyles.swift */; };
+		FA633B2B2970372F0039B373 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B2A2970372F0039B373 /* BaseLabel.swift */; };
 		FA633B31297039480039B373 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2D297039480039B373 /* Inter-Medium.ttf */; };
 		FA633B32297039480039B373 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2E297039480039B373 /* Inter-Light.ttf */; };
 		FA633B33297039480039B373 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA633B2F297039480039B373 /* Inter-Bold.ttf */; };
@@ -27,7 +27,10 @@
 		FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B35297046BD0039B373 /* BaseTextButton.swift */; };
 		FA633B3829705BC40039B373 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3729705BC40039B373 /* PrivacyViewController.swift */; };
 		FA633B3A29705BD30039B373 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3929705BD30039B373 /* SignInViewController.swift */; };
-		FA633B3C297064F10039B373 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3B297064F10039B373 /* PageViewController.swift */; };
+		FA633B3F29716A590039B373 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B3E29716A590039B373 /* Onboarding.swift */; };
+		FA633B43297193870039B373 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B42297193870039B373 /* OnboardingScreenView.swift */; };
+		FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */; };
+		FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B462971B8420039B373 /* UILabel+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +48,7 @@
 		FA633B23297034740039B373 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA633B25297035480039B373 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		FA633B28297036160039B373 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
-		FA633B2A2970372F0039B373 /* LabelFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFontStyles.swift; sourceTree = "<group>"; };
+		FA633B2A2970372F0039B373 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		FA633B2D297039480039B373 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		FA633B2E297039480039B373 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		FA633B2F297039480039B373 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
@@ -53,7 +56,10 @@
 		FA633B35297046BD0039B373 /* BaseTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextButton.swift; sourceTree = "<group>"; };
 		FA633B3729705BC40039B373 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		FA633B3929705BD30039B373 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		FA633B3B297064F10039B373 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		FA633B3E29716A590039B373 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		FA633B42297193870039B373 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		FA633B462971B8420039B373 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +92,11 @@
 		FA633AF1296FFDA30039B373 /* Nexflix */ = {
 			isa = PBXGroup;
 			children = (
-				FA633B0B2970052B0039B373 /* Application */,
-				FA633B0F2970058A0039B373 /* Coordinator */,
-				FA633B1E29700F7A0039B373 /* Protocols */,
 				FA633B0E2970056F0039B373 /* NetworkService */,
+				FA633B1E29700F7A0039B373 /* Protocols */,
+				FA633B0B2970052B0039B373 /* Application */,
+				FA633B172970079D0039B373 /* Models */,
+				FA633B0F2970058A0039B373 /* Coordinator */,
 				FA633B10297005990039B373 /* Core */,
 				FA633B0C2970054E0039B373 /* Extensions */,
 				FA633B09297005000039B373 /* CoreData */,
@@ -131,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				FA633B28297036160039B373 /* UIStackView+Extensions.swift */,
+				FA633B462971B8420039B373 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,9 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				FA633B3D29706C330039B373 /* Controllers */,
-				FA633B172970079D0039B373 /* Models */,
 				FA633B27297035A20039B373 /* Onboarding */,
-				FA633B18297007AF0039B373 /* Views */,
 				FA633B12297005D10039B373 /* Components */,
 			);
 			path = Core;
@@ -165,6 +171,8 @@
 		FA633B12297005D10039B373 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FA633B2A2970372F0039B373 /* BaseLabel.swift */,
+				FA633B35297046BD0039B373 /* BaseTextButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -180,25 +188,9 @@
 		FA633B172970079D0039B373 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA633B3E29716A590039B373 /* Onboarding.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FA633B18297007AF0039B373 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FA633B2A2970372F0039B373 /* LabelFontStyles.swift */,
-				FA633B35297046BD0039B373 /* BaseTextButton.swift */,
-				FA633B19297007BD0039B373 /* Cells */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FA633B19297007BD0039B373 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		FA633B1E29700F7A0039B373 /* Protocols */ = {
@@ -213,7 +205,9 @@
 			isa = PBXGroup;
 			children = (
 				FA633B25297035480039B373 /* OnboardingCoordinator.swift */,
+				FA633B42297193870039B373 /* OnboardingScreenView.swift */,
 				FA633B212970305E0039B373 /* OnboardingViewController.swift */,
+				FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -235,7 +229,6 @@
 				FA633B23297034740039B373 /* TabBarViewController.swift */,
 				FA633B3729705BC40039B373 /* PrivacyViewController.swift */,
 				FA633B3929705BD30039B373 /* SignInViewController.swift */,
-				FA633B3B297064F10039B373 /* PageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,17 +310,20 @@
 				FA633B3A29705BD30039B373 /* SignInViewController.swift in Sources */,
 				FA633B24297034740039B373 /* TabBarViewController.swift in Sources */,
 				FA633AF3296FFDA30039B373 /* AppDelegate.swift in Sources */,
+				FA633B43297193870039B373 /* OnboardingScreenView.swift in Sources */,
 				FA633B3829705BC40039B373 /* PrivacyViewController.swift in Sources */,
 				FA633B1B29700C420039B373 /* AppColors.swift in Sources */,
 				FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */,
-				FA633B3C297064F10039B373 /* PageViewController.swift in Sources */,
 				FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */,
 				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
+				FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */,
 				FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */,
 				FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */,
-				FA633B2B2970372F0039B373 /* LabelFontStyles.swift in Sources */,
+				FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */,
+				FA633B2B2970372F0039B373 /* BaseLabel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
+				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,
 				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

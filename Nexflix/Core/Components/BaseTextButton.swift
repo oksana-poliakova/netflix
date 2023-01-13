@@ -9,6 +9,8 @@ import UIKit
 
 final class BaseTextButton: UIButton {
     
+    // MARK: - Properties
+    
     private var textLabel: BaseLabel
     
     // MARK: - Init
@@ -24,7 +26,7 @@ final class BaseTextButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Apply styles
+    // MARK: - SetupUI
     
     private func setupUI() {
         textLabel.translatesAutoresizingMaskIntoConstraints = false
