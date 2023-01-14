@@ -1,13 +1,13 @@
 //
-//  OnboardingCoordinator.swift
+//  SignInCoordinator.swift
 //  Nexflix
 //
-//  Created by Oksana Poliakova on 12.01.2023.
+//  Created by Oksana Poliakova on 14.01.2023.
 //
 
 import UIKit
 
-final class OnboardingCoordinator: Coordinator {
+final class SignInCoordinator: Coordinator {
     
     // MARK: - Properties
     
@@ -23,18 +23,13 @@ final class OnboardingCoordinator: Coordinator {
     
     func start() { }
     
-    func pressedPrivacyButton() {
-        let vc = PrivacyViewController()
+    func signInPressed() {
+        let vc = UIViewController()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func pressedSignInButton() {
-        let vc = SignInViewController()
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func pressedGetStartedButton() {
-        let vc = SignInViewController()
+    func recoverPasswordPressed() {
+        let vc = UIViewController()
         navigationController.pushViewController(vc, animated: true)
     }
 }

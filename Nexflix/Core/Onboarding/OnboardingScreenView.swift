@@ -56,8 +56,7 @@ final class OnboardingScreenView: UIView {
         // Appearance
         guard let pageView = pageViewController.view else { return }
         [pageView, pageControll].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            addSubview($0)
+            addSubView($0, translatesAutoresizingMaskIntiConstraints: false)
         }
         
         // Constraints

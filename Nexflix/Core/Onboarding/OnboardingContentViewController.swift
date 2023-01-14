@@ -18,12 +18,15 @@ final class OnboardingContentViewController: UIViewController {
     }()
     
     private let titleLabel: BaseLabel = {
-        let label = BaseLabel(type: .mediumHeader)
+        let label = BaseLabel()
+        label.font = AppFonts.mediumHeader.font
+        label.textAlignment = .center
         return label
     }()
     
     private let subtitleLabel: BaseLabel = {
-        let label = BaseLabel(type: .medium(fontSize: 18))
+        let label = BaseLabel()
+        label.font = AppFonts.medium.font
         return label
     }()
     
@@ -60,8 +63,7 @@ final class OnboardingContentViewController: UIViewController {
 
         // Appearance
         [screenImageView, titleLabel, subtitleLabel].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview($0)
+            view.addSubView($0, translatesAutoresizingMaskIntiConstraints: false)
         }
         
         // Constraints 
@@ -73,7 +75,7 @@ final class OnboardingContentViewController: UIViewController {
             screenImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -30),
             
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.padding),
             
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 45),

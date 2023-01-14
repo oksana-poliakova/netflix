@@ -20,14 +20,15 @@ final class OnboardingViewController: UIViewController {
     }()
     
     private lazy var privacyButton: BaseTextButton = {
-        let button = BaseTextButton(type: .light(fontSize: 16))
+        let button = BaseTextButton()
         button.setTextLabel(text: "Privacy")
         button.addTarget(self, action: #selector(tappedPrivacyButton), for: .touchUpInside)
         return button
     }()
     
     private lazy var signInButton: BaseTextButton = {
-        let button = BaseTextButton(type: .light(fontSize: 16))
+        let button = BaseTextButton()
+        button.titleLabel?.font = AppFonts.boldRegularButton.font
         button.setTextLabel(text: "Sign In")
         button.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
         return button
@@ -42,14 +43,14 @@ final class OnboardingViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = AppColors.primaryRed
         button.tintColor = AppColors.white
-        button.layer.cornerRadius = 2
+        button.makeBorderedButton(cornerRadius: .cornerRadius, backgroundColor: AppColors.primaryRed)
+        button.layer.cornerRadius = .cornerRadius
         button.setTitle("Get Started", for: .normal)
         button.addTarget(self, action: #selector(tappedGetStartedButton), for: .touchUpInside)
         return button
     }()
     
     private let onboardingScreenView = OnboardingScreenView()
-    private let sideConstraint: CGFloat = 16
     
     // MARK: - Init
     
@@ -77,19 +78,18 @@ final class OnboardingViewController: UIViewController {
         
         // Appearance
         [logoImageView, buttonStackView, onboardingScreenView, getStartedButton].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview($0)
+            view.addSubView($0, translatesAutoresizingMaskIntiConstraints: false)
         }
         
         // Constraints
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: sideConstraint),
+            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .padding),
             logoImageView.widthAnchor.constraint(equalToConstant: 86),
-            logoImageView.heightAnchor.constraint(equalToConstant: 22),
+            logoImageView.heightAnchor.constraint(equalToConstant: CGFloat.icon.small),
             
             buttonStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 6),
-            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideConstraint),
+            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.padding),
             
             onboardingScreenView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 60),
             onboardingScreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -98,8 +98,8 @@ final class OnboardingViewController: UIViewController {
             onboardingScreenView.bottomAnchor.constraint(equalTo: getStartedButton.topAnchor, constant: -16),
             
             getStartedButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -14),
-            getStartedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: sideConstraint),
-            getStartedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideConstraint),
+            getStartedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .padding),
+            getStartedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.padding),
             getStartedButton.heightAnchor.constraint(equalToConstant: 48)
         ])
     }

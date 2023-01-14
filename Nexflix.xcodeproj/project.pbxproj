@@ -31,6 +31,13 @@
 		FA633B43297193870039B373 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B42297193870039B373 /* OnboardingScreenView.swift */; };
 		FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */; };
 		FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B462971B8420039B373 /* UILabel+Extensions.swift */; };
+		FA633B4E2971EA3E0039B373 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */; };
+		FA633B502972F7770039B373 /* PasswordTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B4F2972F7770039B373 /* PasswordTextFieldView.swift */; };
+		FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B51297303870039B373 /* CGFloat+Constants.swift */; };
+		FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B53297309620039B373 /* UIView+Extensions.swift */; };
+		FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B55297320370039B373 /* SignInCoordinator.swift */; };
+		FA633B5C29732D980039B373 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5B29732D980039B373 /* AppFonts.swift */; };
+		FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5D297339360039B373 /* UIButton+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,13 @@
 		FA633B42297193870039B373 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		FA633B462971B8420039B373 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B4F2972F7770039B373 /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
+		FA633B51297303870039B373 /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
+		FA633B53297309620039B373 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B55297320370039B373 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		FA633B5B29732D980039B373 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		FA633B5D297339360039B373 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +131,11 @@
 		FA633B0A2970050F0039B373 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA633B1A29700C420039B373 /* AppColors.swift */,
+				FA633B5B29732D980039B373 /* AppFonts.swift */,
 				FA633B2C297039480039B373 /* Fonts */,
 				FA633B03296FFDA40039B373 /* Info.plist */,
 				FA633AFE296FFDA40039B373 /* Assets.xcassets */,
-				FA633B14297006FA0039B373 /* Colors */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -138,6 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				FA633B28297036160039B373 /* UIStackView+Extensions.swift */,
+				FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */,
+				FA633B5D297339360039B373 /* UIButton+Extensions.swift */,
+				FA633B51297303870039B373 /* CGFloat+Constants.swift */,
+				FA633B53297309620039B373 /* UIView+Extensions.swift */,
 				FA633B462971B8420039B373 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
@@ -162,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FA633B3D29706C330039B373 /* Controllers */,
+				FA633B482971E7F40039B373 /* Sign In */,
 				FA633B27297035A20039B373 /* Onboarding */,
 				FA633B12297005D10039B373 /* Components */,
 			);
@@ -172,17 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				FA633B2A2970372F0039B373 /* BaseLabel.swift */,
+				FA633B4F2972F7770039B373 /* PasswordTextFieldView.swift */,
 				FA633B35297046BD0039B373 /* BaseTextButton.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		FA633B14297006FA0039B373 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				FA633B1A29700C420039B373 /* AppColors.swift */,
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		FA633B172970079D0039B373 /* Models */ = {
@@ -228,9 +241,17 @@
 			children = (
 				FA633B23297034740039B373 /* TabBarViewController.swift */,
 				FA633B3729705BC40039B373 /* PrivacyViewController.swift */,
-				FA633B3929705BD30039B373 /* SignInViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA633B482971E7F40039B373 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B3929705BD30039B373 /* SignInViewController.swift */,
+				FA633B55297320370039B373 /* SignInCoordinator.swift */,
+			);
+			path = "Sign In";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,19 +333,26 @@
 				FA633AF3296FFDA30039B373 /* AppDelegate.swift in Sources */,
 				FA633B43297193870039B373 /* OnboardingScreenView.swift in Sources */,
 				FA633B3829705BC40039B373 /* PrivacyViewController.swift in Sources */,
+				FA633B4E2971EA3E0039B373 /* UITextField+Extensions.swift in Sources */,
 				FA633B1B29700C420039B373 /* AppColors.swift in Sources */,
 				FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */,
 				FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */,
 				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
+				FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */,
+				FA633B5C29732D980039B373 /* AppFonts.swift in Sources */,
+				FA633B502972F7770039B373 /* PasswordTextFieldView.swift in Sources */,
 				FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */,
 				FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */,
 				FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */,
 				FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */,
+				FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */,
 				FA633B2B2970372F0039B373 /* BaseLabel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
+				FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */,
 				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,
 				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,
+				FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

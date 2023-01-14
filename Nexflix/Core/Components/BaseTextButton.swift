@@ -15,8 +15,8 @@ final class BaseTextButton: UIButton {
     
     // MARK: - Init
     
-    init(type: LabelFontStyle = .light(fontSize: 16)) {
-        textLabel = BaseLabel(type: type)
+    init() {
+        textLabel = BaseLabel()
         super.init(frame: .zero)
         
         setupUI()
@@ -29,10 +29,9 @@ final class BaseTextButton: UIButton {
     // MARK: - SetupUI
     
     private func setupUI() {
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .clear
         
-        addSubview(textLabel)
+        addSubView(textLabel, translatesAutoresizingMaskIntiConstraints: false)
         
         NSLayoutConstraint.activate([
             textLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
