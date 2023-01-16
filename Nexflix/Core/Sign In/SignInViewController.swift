@@ -50,6 +50,8 @@ final class SignInViewController: UIViewController {
         return label
     }()
     
+    private lazy var helpBarButtonItem = UIBarButtonItem(title: "Help", style: .plain, target: self, action: #selector(helpButtonPressed))
+    
     private let passwordTextFieldView = PasswordTextFieldView()
     private var coordinator: SignInCoordinator
     
@@ -78,11 +80,13 @@ final class SignInViewController: UIViewController {
     
     private func setupUI() {
         
+        navigationItem.rightBarButtonItem = helpBarButtonItem
+        navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        
         view.backgroundColor = AppColors.greyDark2
         
         [emailTextField, passwordTextFieldView, signInButton, recoverPasswordButton, subtitle].forEach {
             view.addSubView($0, translatesAutoresizingMaskIntiConstraints: false)
-            
         }
         
         NSLayoutConstraint.activate([
@@ -124,6 +128,10 @@ final class SignInViewController: UIViewController {
     
     @objc func recoverPasswordTapped() {
         coordinator.navigate(to: .recoverPassword)
+    }
+    
+    @objc func helpButtonPressed() {
+        
     }
 }
 

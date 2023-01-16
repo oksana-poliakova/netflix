@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Navigation
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = AppColors.white
+        navigationBarAppearance.isTranslucent = false
+      
+        // Fonts
         let fonts = Bundle.main.urls(forResourcesWithExtension: "ttf", subdirectory: nil)
         fonts?.forEach({ url in
             CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)

@@ -11,34 +11,13 @@ final class OnboardingViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "logo")
-        imageView.tintColor = AppColors.primaryRed
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
+    private let logoImageView = UIImageView()
+    private let logoImageItem = UIBarButtonItem(image: UIImage(named: "logo"))
     
-    private lazy var privacyButton: BaseTextButton = {
-        let button = BaseTextButton()
-        button.setTextLabel(text: "Privacy")
-        button.addTarget(self, action: #selector(tappedPrivacyButton), for: .touchUpInside)
-        return button
-    }()
+    private lazy var privacyButton = UIBarButtonItem(title: "Privacy", style: .plain, target: self, action: #selector(tappedPrivacyButton))
     
-    private lazy var signInButton: BaseTextButton = {
-        let button = BaseTextButton()
-        button.titleLabel?.font = AppFonts.boldRegularButton.font
-        button.setTextLabel(text: "Sign In")
-        button.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
-        return button
-    }()
-    
-    private lazy var buttonStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [privacyButton, signInButton], axis: .horizontal, spacing: 16, distribution: .fill, aligment: .fill)
-        return stackView
-    }()
-    
+    private lazy var signInButton = UIBarButtonItem(title: "Sign In", style: .plain, target: self, action: #selector(tappedSignInButton))
+
     private lazy var getStartedButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = AppColors.primaryRed
@@ -76,24 +55,21 @@ final class OnboardingViewController: UIViewController {
     
     private func setupUI() {
         
+        // Navigation
+        navigationItem.leftBarButtonItem = logoImageItem
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        navigationItem.rightBarButtonItems = [privacyButton, signInButton]
+        
         view.backgroundColor = AppColors.black
         
         // Appearance
-        [logoImageView, buttonStackView, onboardingScreenView, getStartedButton].forEach {
+        [onboardingScreenView, getStartedButton].forEach {
             view.addSubView($0, translatesAutoresizingMaskIntiConstraints: false)
         }
         
         // Constraints
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .padding),
-            logoImageView.widthAnchor.constraint(equalToConstant: 86),
-            logoImageView.heightAnchor.constraint(equalToConstant: CGFloat.icon.small),
-            
-            buttonStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 6),
-            buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.padding),
-            
-            onboardingScreenView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 60),
+            onboardingScreenView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             onboardingScreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             onboardingScreenView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             onboardingScreenView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
