@@ -7,9 +7,12 @@
 
 import UIKit
 
+/// Coordinator interface, responsible for navigation throught the application
 protocol Coordinator {
-    var navigationController: UINavigationController { get set }
-    func start()
+    /// associated type it's like good approach to use it in different ways like enums, generics, typealias and so on
+    associatedtype Path
+    /// here is the best way how you can communicate through your coordinator and make different behaviour
+    func navigate(to step: Path)
 }
 
 

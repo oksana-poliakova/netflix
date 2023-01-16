@@ -9,9 +9,17 @@ import UIKit
 
 final class OnboardingCoordinator: Coordinator {
     
+    // MARK: - Enum
+
+    enum Path {
+        case privacy
+        case signIn
+        case start
+    }
+    
     // MARK: - Properties
     
-    var navigationController: UINavigationController
+    let navigationController: UINavigationController
     
     // MARK: - Init
     
@@ -21,20 +29,19 @@ final class OnboardingCoordinator: Coordinator {
     
     // MARK: - Functions
     
-    func start() { }
-    
-    func pressedPrivacyButton() {
-        let vc = PrivacyViewController()
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func pressedSignInButton() {
-        let vc = SignInViewController()
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func pressedGetStartedButton() {
-        let vc = SignInViewController()
-        navigationController.pushViewController(vc, animated: true)
+    func navigate(to step: Path) {
+        switch step {
+        case .start:
+            let coordinator = SignInCoordinator(navigationController: navigationController)
+            let vc = SignInViewController(coordinator: coordinator)
+            navigationController.pushViewController(vc, animated: true)
+        case .privacy:
+            let vc = PrivacyViewController()
+            navigationController.pushViewController(vc, animated: true)
+        case .signIn:
+            let coordinator = SignInCoordinator(navigationController: navigationController)
+            let vc = SignInViewController(coordinator: coordinator)
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
 }

@@ -51,10 +51,12 @@ final class OnboardingViewController: UIViewController {
     }()
     
     private let onboardingScreenView = OnboardingScreenView()
+    private var coordinator: OnboardingCoordinator
     
     // MARK: - Init
     
-    init() {
+    init(coordinator: OnboardingCoordinator) {
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -107,17 +109,14 @@ final class OnboardingViewController: UIViewController {
     // MARK: - Actions
     
     @objc func tappedPrivacyButton() {
-        guard let navigationController = navigationController else { return }
-        OnboardingCoordinator(navigationController: navigationController).pressedPrivacyButton()
+        coordinator.navigate(to: .privacy)
     }
 
     @objc func tappedSignInButton() {
-        guard let navigationController = navigationController else { return }
-        OnboardingCoordinator(navigationController: navigationController).pressedSignInButton()
+        coordinator.navigate(to: .signIn)
     }
     
     @objc func tappedGetStartedButton() {
-        guard let navigationController = navigationController else { return }
-        OnboardingCoordinator(navigationController: navigationController).pressedGetStartedButton()
+        coordinator.navigate(to: .start)
     }
 }

@@ -9,27 +9,33 @@ import UIKit
 
 final class SignInCoordinator: Coordinator {
     
+    // MARK: - Enum
+    
+    enum Path {
+        case signIn
+        case recoverPassword
+    }
+    
     // MARK: - Properties
     
-    var navigationController: UINavigationController
+    private var navigationController: UINavigationController
     
     // MARK: - Init
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     // MARK: - Functions
     
-    func start() { }
-    
-    func signInPressed() {
-        let vc = UIViewController()
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func recoverPasswordPressed() {
-        let vc = UIViewController()
-        navigationController.pushViewController(vc, animated: true)
+    func navigate(to step: Path) {
+        switch step {
+        case .signIn:
+            let vc = UIViewController()
+            navigationController.pushViewController(vc, animated: true)
+        case .recoverPassword:
+            let vc = UIViewController()
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
 }

@@ -31,6 +31,7 @@ final class OnboardingContentViewController: UIViewController {
     }()
     
     var index: Int = 0
+    weak var coordinator: AppCoordinator?
     
     // MARK: - Init
     

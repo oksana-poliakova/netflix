@@ -9,14 +9,18 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var coordinator: Coordinator?
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        coordinator = AppCoordinator(navigationController: UINavigationController(rootViewController: OnboardingViewController()), window: UIWindow(windowScene: scene))
-        coordinator?.start()
+        let window = UIWindow(windowScene: scene)
+
+        /// put inside AppCoordinator navigation controller и window
+        coordinator = AppCoordinator(navigationController: UINavigationController(), window: window)
+        /// We use the power of our coordinator to navigation through our application
+        coordinator?.navigate(to: .start)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

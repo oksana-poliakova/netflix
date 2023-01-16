@@ -38,6 +38,7 @@
 		FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B55297320370039B373 /* SignInCoordinator.swift */; };
 		FA633B5C29732D980039B373 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5B29732D980039B373 /* AppFonts.swift */; };
 		FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5D297339360039B373 /* UIButton+Extensions.swift */; };
+		FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		FA633B55297320370039B373 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		FA633B5B29732D980039B373 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		FA633B5D297339360039B373 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				FA633B25297035480039B373 /* OnboardingCoordinator.swift */,
 				FA633B42297193870039B373 /* OnboardingScreenView.swift */,
 				FA633B212970305E0039B373 /* OnboardingViewController.swift */,
+				FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */,
 				FA633B4429719CE90039B373 /* OnboardingContentViewController.swift */,
 			);
 			path = Onboarding;
@@ -347,6 +350,7 @@
 				FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */,
 				FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */,
 				FA633B2B2970372F0039B373 /* BaseLabel.swift in Sources */,
+				FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
 				FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  UITextFields+Extensions.swift
+//  UITextField+Extensions.swift
 //  Nexflix
 //
 //  Created by Oksana Poliakova on 13.01.2023.

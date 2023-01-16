@@ -51,10 +51,12 @@ final class SignInViewController: UIViewController {
     }()
     
     private let passwordTextFieldView = PasswordTextFieldView()
+    private var coordinator: SignInCoordinator
     
     // MARK: - Init
     
-    init() {
+    init(coordinator: SignInCoordinator) {
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -117,13 +119,14 @@ final class SignInViewController: UIViewController {
     // MARK: - Actions
     
     @objc func signInButtonTapped() {
-        guard let navigationController = navigationController else { return }
-        SignInCoordinator(navigationController: navigationController).signInPressed()
+        coordinator.navigate(to: .signIn)
     }
     
     @objc func recoverPasswordTapped() {
-        guard let navigationController = navigationController else { return }
-        SignInCoordinator(navigationController: navigationController).recoverPasswordPressed()
+        coordinator.navigate(to: .recoverPassword)
     }
-    
 }
+
+
+// VIEW MODEL - DATA BINDING
+// COORDINATOR - NAVIGATION

@@ -7,12 +7,27 @@
 
 import UIKit
 
+
+// Composer - responsonsible for compossing all dependencies inside "Any" ViewController
+enum OnboardComposer {
+    static func compose(navigationController: UINavigationController) -> OnboardingViewController {
+        let coordinator = OnboardingCoordinator(navigationController: navigationController)
+        return OnboardingViewController(coordinator: coordinator)
+    }
+}
+
 final class AppCoordinator: Coordinator {
     
     // MARK: - Properties
     
-    var navigationController: UINavigationController
-    let window: UIWindow?
+    private var navigationController: UINavigationController
+    private let window: UIWindow?
+    
+    // MARK: - Enum path
+    
+    enum Path {
+        case start
+    }
     
     // MARK: - Init
     
@@ -21,11 +36,14 @@ final class AppCoordinator: Coordinator {
         self.window = window
     }
     
-    // MARK: - Functions
-    
-    func start() {
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+    func navigate(to step: Path) {
+        switch step {
+        case .start:
+            /// We use navigation controller from scene delegate to send it through navigation stack and compose controller
+            navigationController.setViewControllers([OnboardComposer.compose(navigationController: navigationController)], animated: false)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
     }
 }
 

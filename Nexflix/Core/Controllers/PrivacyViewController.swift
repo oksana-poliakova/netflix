@@ -8,6 +8,8 @@
 import UIKit
 
 final class PrivacyViewController: UIViewController {
+    
+    weak var coordinator: AppCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
