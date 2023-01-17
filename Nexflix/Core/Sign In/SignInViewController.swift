@@ -46,7 +46,7 @@ final class SignInViewController: UIViewController {
         label.textColor = AppColors.lightGrey1
         label.textAlignment = .center
         label.font = AppFonts.smallLight.font
-        label.text = "Sign in is protected by Google reCAPTCHA to ensure you're not a bot. Learn more."
+        label.attributedText = "Sign in is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.".withBoldText(text: "Learn more.", fontForRegularText: AppFonts.smallLight.font, sizeForBoldText: 12)
         return label
     }()
     
@@ -73,7 +73,6 @@ final class SignInViewController: UIViewController {
         
         setupTextField()
         setupUI()
-    
     }
     
     // MARK: - SetupUI

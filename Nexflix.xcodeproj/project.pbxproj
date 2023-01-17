@@ -39,6 +39,8 @@
 		FA633B5C29732D980039B373 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5B29732D980039B373 /* AppFonts.swift */; };
 		FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5D297339360039B373 /* UIButton+Extensions.swift */; };
 		FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */; };
+		FA633B622975C1850039B373 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B612975C1850039B373 /* String+Extensions.swift */; };
+		FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		FA633B5B29732D980039B373 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		FA633B5D297339360039B373 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		FA633B612975C1850039B373 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +160,9 @@
 			children = (
 				FA633B28297036160039B373 /* UIStackView+Extensions.swift */,
 				FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */,
+				FA633B612975C1850039B373 /* String+Extensions.swift */,
 				FA633B5D297339360039B373 /* UIButton+Extensions.swift */,
+				FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */,
 				FA633B51297303870039B373 /* CGFloat+Constants.swift */,
 				FA633B53297309620039B373 /* UIView+Extensions.swift */,
 				FA633B462971B8420039B373 /* UILabel+Extensions.swift */,
@@ -341,6 +347,7 @@
 				FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */,
 				FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */,
 				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
+				FA633B622975C1850039B373 /* String+Extensions.swift in Sources */,
 				FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */,
 				FA633B5C29732D980039B373 /* AppFonts.swift in Sources */,
 				FA633B502972F7770039B373 /* PasswordTextFieldView.swift in Sources */,
@@ -352,6 +359,7 @@
 				FA633B2B2970372F0039B373 /* BaseLabel.swift in Sources */,
 				FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
+				FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
 				FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */,
 				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,

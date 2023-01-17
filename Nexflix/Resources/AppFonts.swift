@@ -21,6 +21,7 @@ enum AppFonts {
     
     case light
     case smallLight
+    case smallBold
     case lightHeader
     case regular
     case regularBold
@@ -31,6 +32,7 @@ enum AppFonts {
     case smallBoldButton
     case boldRegularButton
     case boldHeader
+    case customSizeBold(size: CGFloat)
     
     var font: UIFont {
         switch self {
@@ -38,6 +40,8 @@ enum AppFonts {
             return UIFont(name: "Inter-Light", size: AppFonts.regularFontSize) ?? UIFont()
         case .smallLight:
             return UIFont(name: "Inter-Light", size: AppFonts.smallFontSize) ?? UIFont()
+        case .smallBold:
+            return UIFont(name: "Inter-Bold", size: AppFonts.smallFontSize) ?? UIFont()
         case .lightHeader:
             return UIFont(name: "Inter-Light", size: AppFonts.headerFontSize) ?? UIFont()
         case .regular:
@@ -58,6 +62,8 @@ enum AppFonts {
             return UIFont(name: "Inter-Bold", size: AppFonts.headerFontSize) ?? UIFont()
         case .boldRegularButton:
             return UIFont(name: "Inter-Bold", size: AppFonts.buttonFontSize) ?? UIFont()
+        case .customSizeBold(let size):
+            return UIFont(name: "Inter-Bold", size: size) ?? UIFont()
         }
     }
 }
