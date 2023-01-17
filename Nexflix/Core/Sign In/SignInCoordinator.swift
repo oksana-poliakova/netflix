@@ -31,7 +31,8 @@ final class SignInCoordinator: Coordinator {
     func navigate(to step: Path) {
         switch step {
         case .signIn:
-            let vc = UIViewController()
+            let coordinator = SearchCoordinator(navigationController: navigationController)
+            let vc = SearchViewController(coordinator: coordinator)
             navigationController.pushViewController(vc, animated: true)
         case .recoverPassword:
             let vc = UIViewController()
@@ -39,3 +40,4 @@ final class SignInCoordinator: Coordinator {
         }
     }
 }
+

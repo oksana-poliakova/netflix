@@ -41,6 +41,9 @@
 		FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */; };
 		FA633B622975C1850039B373 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B612975C1850039B373 /* String+Extensions.swift */; };
 		FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */; };
+		FA633B67297701540039B373 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B66297701540039B373 /* SearchViewController.swift */; };
+		FA633B69297707EE0039B373 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B68297707EE0039B373 /* SearchCoordinator.swift */; };
+		FA633B6B297710540039B373 /* UISearch+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B6A297710540039B373 /* UISearch+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		FA633B5F2975712B0039B373 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		FA633B612975C1850039B373 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B66297701540039B373 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA633B68297707EE0039B373 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		FA633B6A297710540039B373 /* UISearch+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearch+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 				FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */,
 				FA633B612975C1850039B373 /* String+Extensions.swift */,
 				FA633B5D297339360039B373 /* UIButton+Extensions.swift */,
+				FA633B6A297710540039B373 /* UISearch+Extensions.swift */,
 				FA633B632975C1FA0039B373 /* UIImageView+Extensions.swift */,
 				FA633B51297303870039B373 /* CGFloat+Constants.swift */,
 				FA633B53297309620039B373 /* UIView+Extensions.swift */,
@@ -190,6 +197,7 @@
 			children = (
 				FA633B3D29706C330039B373 /* Controllers */,
 				FA633B482971E7F40039B373 /* Sign In */,
+				FA633B65297701330039B373 /* Search */,
 				FA633B27297035A20039B373 /* Onboarding */,
 				FA633B12297005D10039B373 /* Components */,
 			);
@@ -261,6 +269,15 @@
 				FA633B55297320370039B373 /* SignInCoordinator.swift */,
 			);
 			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		FA633B65297701330039B373 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FA633B66297701540039B373 /* SearchViewController.swift */,
+				FA633B68297707EE0039B373 /* SearchCoordinator.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +370,7 @@
 				FA633B502972F7770039B373 /* PasswordTextFieldView.swift in Sources */,
 				FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */,
 				FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */,
+				FA633B69297707EE0039B373 /* SearchCoordinator.swift in Sources */,
 				FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */,
 				FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */,
 				FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */,
@@ -365,6 +383,8 @@
 				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,
 				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,
 				FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */,
+				FA633B67297701540039B373 /* SearchViewController.swift in Sources */,
+				FA633B6B297710540039B373 /* UISearch+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
