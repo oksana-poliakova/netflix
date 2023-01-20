@@ -44,6 +44,9 @@
 		FA633B67297701540039B373 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B66297701540039B373 /* SearchViewController.swift */; };
 		FA633B69297707EE0039B373 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B68297707EE0039B373 /* SearchCoordinator.swift */; };
 		FA633B6B297710540039B373 /* UISearch+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B6A297710540039B373 /* UISearch+Extensions.swift */; };
+		FA633B6D297719840039B373 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B6C297719840039B373 /* SearchTableViewCell.swift */; };
+		FA66C85D29780C3200C0352E /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66C85C29780C3200C0352E /* MovieItem.swift */; };
+		FA66C85F2978301000C0352E /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66C85E2978301000C0352E /* Element.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		FA633B66297701540039B373 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FA633B68297707EE0039B373 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		FA633B6A297710540039B373 /* UISearch+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearch+Extensions.swift"; sourceTree = "<group>"; };
+		FA633B6C297719840039B373 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		FA66C85C29780C3200C0352E /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
+		FA66C85E2978301000C0352E /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				FA633B3E29716A590039B373 /* Onboarding.swift */,
+				FA66C85E2978301000C0352E /* Element.swift */,
+				FA66C85C29780C3200C0352E /* MovieItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				FA633B66297701540039B373 /* SearchViewController.swift */,
+				FA633B6C297719840039B373 /* SearchTableViewCell.swift */,
 				FA633B68297707EE0039B373 /* SearchCoordinator.swift */,
 			);
 			path = Search;
@@ -367,10 +376,12 @@
 				FA633B622975C1850039B373 /* String+Extensions.swift in Sources */,
 				FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */,
 				FA633B5C29732D980039B373 /* AppFonts.swift in Sources */,
+				FA633B6D297719840039B373 /* SearchTableViewCell.swift in Sources */,
 				FA633B502972F7770039B373 /* PasswordTextFieldView.swift in Sources */,
 				FA633B4529719CE90039B373 /* OnboardingContentViewController.swift in Sources */,
 				FA633B222970305E0039B373 /* OnboardingViewController.swift in Sources */,
 				FA633B69297707EE0039B373 /* SearchCoordinator.swift in Sources */,
+				FA66C85D29780C3200C0352E /* MovieItem.swift in Sources */,
 				FA633B29297036160039B373 /* UIStackView+Extensions.swift in Sources */,
 				FA633B472971B8420039B373 /* UILabel+Extensions.swift in Sources */,
 				FA633B56297320370039B373 /* SignInCoordinator.swift in Sources */,
@@ -380,6 +391,7 @@
 				FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
 				FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */,
+				FA66C85F2978301000C0352E /* Element.swift in Sources */,
 				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,
 				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,
 				FA633B5E297339360039B373 /* UIButton+Extensions.swift in Sources */,
