@@ -32,7 +32,8 @@ final class SignInCoordinator: Coordinator {
         switch step {
         case .signIn:
             let coordinator = SearchCoordinator(navigationController: navigationController)
-            let vc = SearchViewController(coordinator: coordinator)
+            let searchManager = SearchManager(query: "stranger")
+            let vc = SearchViewController(coordinator: coordinator, manager: searchManager)
             navigationController.pushViewController(vc, animated: true)
         case .recoverPassword:
             let vc = UIViewController()

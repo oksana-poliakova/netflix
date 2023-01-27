@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A16D5D4229842742002657CC /* ResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5D4129842742002657CC /* ResultMapper.swift */; };
+		A16D5D4429842A2D002657CC /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5D4329842A2D002657CC /* SearchManager.swift */; };
+		A1FD37E329840BCA007D7244 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD37E229840BCA007D7244 /* NetworkManager.swift */; };
+		A1FD37E529840C32007D7244 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD37E429840C32007D7244 /* HTTPURLResponse+Extensions.swift */; };
 		FA633AF3296FFDA30039B373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633AF2296FFDA30039B373 /* AppDelegate.swift */; };
 		FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633AF4296FFDA30039B373 /* SceneDelegate.swift */; };
 		FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA633AFB296FFDA30039B373 /* Nexflix.xcdatamodeld */; };
@@ -49,6 +53,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A16D5D4129842742002657CC /* ResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMapper.swift; sourceTree = "<group>"; };
+		A16D5D4329842A2D002657CC /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		A1FD37E229840BCA007D7244 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A1FD37E429840C32007D7244 /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		FA633AEF296FFDA30039B373 /* Nexflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nexflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA633AF2296FFDA30039B373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA633AF4296FFDA30039B373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16D5D4029842733002657CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A16D5D4129842742002657CC /* ResultMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		A1FD37E129840BB5007D7244 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				A16D5D4029842733002657CC /* Mapper */,
+				A1FD37E229840BCA007D7244 /* NetworkManager.swift */,
+				A16D5D4329842A2D002657CC /* SearchManager.swift */,
+			);
+			path = "Network Service";
+			sourceTree = "<group>";
+		};
 		FA633AE6296FFDA30039B373 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +148,9 @@
 		FA633AF1296FFDA30039B373 /* Nexflix */ = {
 			isa = PBXGroup;
 			children = (
-				FA633B0E2970056F0039B373 /* NetworkService */,
 				FA633B1E29700F7A0039B373 /* Protocols */,
 				FA633B0B2970052B0039B373 /* Application */,
+				A1FD37E129840BB5007D7244 /* Network Service */,
 				FA633B172970079D0039B373 /* Models */,
 				FA633B0F2970058A0039B373 /* Coordinator */,
 				FA633B10297005990039B373 /* Core */,
@@ -170,6 +196,7 @@
 			children = (
 				FA633B28297036160039B373 /* UIStackView+Extensions.swift */,
 				FA633B4D2971EA3E0039B373 /* UITextField+Extensions.swift */,
+				A1FD37E429840C32007D7244 /* HTTPURLResponse+Extensions.swift */,
 				FA633B612975C1850039B373 /* String+Extensions.swift */,
 				FA633B5D297339360039B373 /* UIButton+Extensions.swift */,
 				FA633B6A297710540039B373 /* UISearch+Extensions.swift */,
@@ -179,13 +206,6 @@
 				FA633B462971B8420039B373 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FA633B0E2970056F0039B373 /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		FA633B0F2970058A0039B373 /* Coordinator */ = {
@@ -370,6 +390,7 @@
 				FA633B2029700F8C0039B373 /* Coordinator.swift in Sources */,
 				FA633B26297035490039B373 /* OnboardingCoordinator.swift in Sources */,
 				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
+				A1FD37E329840BCA007D7244 /* NetworkManager.swift in Sources */,
 				FA633B622975C1850039B373 /* String+Extensions.swift in Sources */,
 				FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */,
 				FA633B5C29732D980039B373 /* AppFonts.swift in Sources */,
@@ -386,7 +407,10 @@
 				FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */,
+				A1FD37E529840C32007D7244 /* HTTPURLResponse+Extensions.swift in Sources */,
+				A16D5D4429842A2D002657CC /* SearchManager.swift in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,
+				A16D5D4229842742002657CC /* ResultMapper.swift in Sources */,
 				FA633B52297303870039B373 /* CGFloat+Constants.swift in Sources */,
 				FA633B3F29716A590039B373 /* Onboarding.swift in Sources */,
 				FA633B36297046BD0039B373 /* BaseTextButton.swift in Sources */,

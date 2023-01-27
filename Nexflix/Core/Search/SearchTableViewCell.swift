@@ -25,7 +25,7 @@ class SearchTableViewCell: UITableViewCell {
     
     private lazy var playButton: UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(UIImage(named: "playIcon"), for: <#T##UIControl.State#>)
+        button.setBackgroundImage(UIImage(named: "playIcon"), for: .normal)
         return button
     }()
     
