@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchTableViewCell: UITableViewCell {
     
@@ -66,6 +67,14 @@ class SearchTableViewCell: UITableViewCell {
             playButton.topAnchor.constraint(equalTo: contentView.topAnchor),
             playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
+    }
+    
+    func configureCell(model: Title) {
+        titleLabel.text = model.jawSummary.title
+    
+        guard let url = URL(string: model.jawSummary.backgroundImage.url) else { return }
+        
+        listImageView.kf.setImage(with: url)
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EE9D2F347D4AE30F76ACDD4 /* Pods_Nexflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89818F4E635A9B258C07D87A /* Pods_Nexflix.framework */; };
 		A16D5D4229842742002657CC /* ResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5D4129842742002657CC /* ResultMapper.swift */; };
 		A16D5D4429842A2D002657CC /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5D4329842A2D002657CC /* SearchManager.swift */; };
 		A1FD37E329840BCA007D7244 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD37E229840BCA007D7244 /* NetworkManager.swift */; };
@@ -53,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FEF18F8BDA597473866AB35 /* Pods-Nexflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nexflix.debug.xcconfig"; path = "Target Support Files/Pods-Nexflix/Pods-Nexflix.debug.xcconfig"; sourceTree = "<group>"; };
+		89818F4E635A9B258C07D87A /* Pods_Nexflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nexflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16D5D4129842742002657CC /* ResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMapper.swift; sourceTree = "<group>"; };
 		A16D5D4329842A2D002657CC /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		A1FD37E229840BCA007D7244 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		FA633B6A297710540039B373 /* UISearch+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearch+Extensions.swift"; sourceTree = "<group>"; };
 		FA633B6C297719840039B373 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA66C85C29780C3200C0352E /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
+		FAB2E489889A420E6F695246 /* Pods-Nexflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nexflix.release.xcconfig"; path = "Target Support Files/Pods-Nexflix/Pods-Nexflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +109,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE9D2F347D4AE30F76ACDD4 /* Pods_Nexflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED3E0CF60FC74C5EDD543EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89818F4E635A9B258C07D87A /* Pods_Nexflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EAC3EBD50875945BEB9B681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FEF18F8BDA597473866AB35 /* Pods-Nexflix.debug.xcconfig */,
+				FAB2E489889A420E6F695246 /* Pods-Nexflix.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A16D5D4029842733002657CC /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +157,8 @@
 			children = (
 				FA633AF1296FFDA30039B373 /* Nexflix */,
 				FA633AF0296FFDA30039B373 /* Products */,
+				6EAC3EBD50875945BEB9B681 /* Pods */,
+				0ED3E0CF60FC74C5EDD543EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,9 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA633B06296FFDA40039B373 /* Build configuration list for PBXNativeTarget "Nexflix" */;
 			buildPhases = (
+				8EB663C7A94B6C3123606322 /* [CP] Check Pods Manifest.lock */,
 				FA633AEB296FFDA30039B373 /* Sources */,
 				FA633AEC296FFDA30039B373 /* Frameworks */,
 				FA633AED296FFDA30039B373 /* Resources */,
+				3D43F63E28C5BADB5C56038A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +401,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D43F63E28C5BADB5C56038A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nexflix/Pods-Nexflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nexflix/Pods-Nexflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nexflix/Pods-Nexflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EB663C7A94B6C3123606322 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nexflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA633AEB296FFDA30039B373 /* Sources */ = {
@@ -550,6 +619,7 @@
 		};
 		FA633B07296FFDA40039B373 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEF18F8BDA597473866AB35 /* Pods-Nexflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +649,7 @@
 		};
 		FA633B08296FFDA40039B373 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAB2E489889A420E6F695246 /* Pods-Nexflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

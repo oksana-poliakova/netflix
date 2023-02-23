@@ -7,37 +7,31 @@
 
 import UIKit
 
-// MARK: - MovieElement
+struct Movie: Codable {
+    let titles: [Title]
 
-struct MovieElement: Codable {
-    let titleID: String?
-    let details: Details?
-    
     enum CodingKeys: String, CodingKey {
-        case titleID = "titleId"
-        case details = "details"
+        case titles = "titles"
     }
 }
 
-// MARK: - Details
+// MARK: - Title
+struct Title: Codable {
+    let jawSummary: JawSummary
 
-struct Details: Codable {
-    let id: Int?
-    let type: String?
-    let title: String?
-    let releaseYear: Int?
-    let episodeCount: Int?
-    let episodeTitle: String?
-    let logoImage: LogoImage?
-    let backgroundImage: BackgroundImage?
-    
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case type = "type"
+        case jawSummary = "jawSummary"
+    }
+}
+
+// MARK: - JawSummary
+struct JawSummary: Codable {
+    let title: String
+    let logoImage: LogoImage
+    let backgroundImage: BackgroundImage
+
+    enum CodingKeys: String, CodingKey {
         case title = "title"
-        case releaseYear = "releaseYear"
-        case episodeCount = "episodeCount"
-        case episodeTitle = "episodeTitle"
         case logoImage = "logoImage"
         case backgroundImage = "backgroundImage"
     }
@@ -45,40 +39,18 @@ struct Details: Codable {
 
 // MARK: - BackgroundImage
 struct BackgroundImage: Codable {
-    let videoID: Int?
-    let url: String?
-    let width: Int?
-    let height: Int?
-    let size: Int?
-    let imageKey: String?
+    let url: String
 
     enum CodingKeys: String, CodingKey {
-        case videoID = "videoId"
         case url = "url"
-        case width = "width"
-        case height = "height"
-        case size = "size"
-        case imageKey = "imageKey"
     }
 }
 
 // MARK: - LogoImage
 struct LogoImage: Codable {
-    let videoID: Int?
-    let url: String?
-    let type: String?
-    let width: Int?
-    let height: Int?
-    let size: String?
-    let imageKey: String?
-
+    let url: String
+    
     enum CodingKeys: String, CodingKey {
-        case videoID = "videoId"
         case url = "url"
-        case type = "type"
-        case width = "width"
-        case height = "height"
-        case size = "size"
-        case imageKey = "imageKey"
     }
 }

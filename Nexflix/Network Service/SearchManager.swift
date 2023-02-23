@@ -9,10 +9,10 @@ import Foundation
 
 
 final class SearchManager: NetworkManager {
+    
     // MARK: - Properties
     
-    private let baseURLComponent = URLComponents(string: "https://netflix54.p.rapidapi.com/")
-    private let urlQueries: [URLQueryItem]
+    private var baseURLComponent = URLComponents(string: "https://netflix54.p.rapidapi.com/search/")
     private let apiKey = "6b3e1fdf79msh0c30631baa1086dp1340d4jsn9cc5a8a84a20"
     private var headers: [String: String] = [
         "X-RapidAPI-Key": "6b3e1fdf79msh0c30631baa1086dp1340d4jsn9cc5a8a84a20",
@@ -27,7 +27,7 @@ final class SearchManager: NetworkManager {
     // MARK: - Init
     
     init(query: String) {
-        self.urlQueries = [URLQueryItem(name: "query", value: query)]
+        baseURLComponent?.queryItems = [URLQueryItem(name: "query", value: query)]
     }
     
     // MARK: - Fetch data
@@ -35,7 +35,7 @@ final class SearchManager: NetworkManager {
     func fetch(completionBlock: @escaping NetworkManager.Result) {
         guard
             let baseURLString = baseURLComponent?.url?.absoluteString,
-            let url = URL(string: baseURLString + EndPoint.search)
+            let url = URL(string: baseURLString)
         else {
             completionBlock(.failure(Error.badURL))
             return
@@ -44,6 +44,7 @@ final class SearchManager: NetworkManager {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         urlRequest.allHTTPHeaderFields = headers
+        
         
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard

@@ -33,6 +33,7 @@ final class SearchViewController: UIViewController {
     
     private var coordinator: SearchCoordinator
     private let manager: NetworkManager
+    private var movieItems: [Title] = []
     
     // MARK: - Init
     
@@ -76,8 +77,11 @@ final class SearchViewController: UIViewController {
         manager.fetch { result in
             switch result {
             case .success(let data):
-                let result = ResultMapper.map(model: MovieElement.self, data)
+                guard let result = ResultMapper.map(model: Movie.self, data)
+                else { return }
                 
+                self.movieItems = result.titles
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -91,10 +95,12 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return movieItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as? SearchTableViewCell else { return UITableViewCell() }
+        cell.configureCell(model: movieItems[indexPath.row])
+        return cell
     }
 }

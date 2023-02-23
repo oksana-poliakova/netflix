@@ -32,8 +32,11 @@ final class OnboardingCoordinator: Coordinator {
     func navigate(to step: Path) {
         switch step {
         case .start:
-            let coordinator = SignInCoordinator(navigationController: navigationController)
-            let vc = SignInViewController(coordinator: coordinator)
+//            let coordinator = SignInCoordinator(navigationController: navigationController)
+//            let vc = SignInViewController(coordinator: coordinator)
+            let manager = SearchManager(query: "stranger")
+            let coordinator = SearchCoordinator(navigationController: navigationController)
+            let vc = SearchViewController(coordinator: coordinator, manager: manager)
             navigationController.pushViewController(vc, animated: true)
         case .privacy:
             let vc = PrivacyViewController()
