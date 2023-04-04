@@ -23,10 +23,11 @@ final class SearchViewController: UIViewController {
     }()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
         return tableView
     }()
@@ -89,13 +90,36 @@ final class SearchViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension SearchViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 94
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width - 16, height: headerView.frame.height - 10)
+        label.text = "Frequent queries"
+        label.font = AppFonts.regularBold.font
+        label.textColor = AppColors.white
+        headerView.addSubview(label)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

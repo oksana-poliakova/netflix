@@ -55,17 +55,26 @@ class SearchTableViewCell: UITableViewCell {
             contentView.addSubview($0)
         }
         
+        listImageView.layer.cornerRadius = 4
+        titleLabel.textColor = AppColors.white
+        titleLabel.font = AppFonts.smallBoldButton.font
+        playButton.tintColor = AppColors.white
+        playButton.contentMode = .scaleAspectFit
+        
         NSLayoutConstraint.activate([
             listImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             listImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            listImageView.widthAnchor.constraint(equalToConstant: 96),
-            listImageView.heightAnchor.constraint(equalToConstant: 55),
+            listImageView.widthAnchor.constraint(equalToConstant: 130),
+            listImageView.heightAnchor.constraint(equalToConstant: 74),
             
             titleLabel.leadingAnchor.constraint(equalTo: listImageView.trailingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: -40),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
-            playButton.topAnchor.constraint(equalTo: contentView.topAnchor),
-            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
+            playButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -22),
+            playButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            playButton.heightAnchor.constraint(equalToConstant: 32),
+            playButton.widthAnchor.constraint(equalToConstant: 32)
         ])
     }
     
@@ -73,8 +82,6 @@ class SearchTableViewCell: UITableViewCell {
         titleLabel.text = model.jawSummary.title
     
         guard let url = URL(string: model.jawSummary.backgroundImage.url) else { return }
-        
         listImageView.kf.setImage(with: url)
     }
-    
 }
