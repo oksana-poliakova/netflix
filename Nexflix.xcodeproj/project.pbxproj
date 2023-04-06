@@ -51,6 +51,8 @@
 		FA633B6B297710540039B373 /* UISearch+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B6A297710540039B373 /* UISearch+Extensions.swift */; };
 		FA633B6D297719840039B373 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633B6C297719840039B373 /* SearchTableViewCell.swift */; };
 		FA66C85D29780C3200C0352E /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66C85C29780C3200C0352E /* MovieItem.swift */; };
+		FAD52D2029DD9EB3009B7744 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD52D1F29DD9EB3009B7744 /* DetailScreenView.swift */; };
+		FAD52D2229DDC28B009B7744 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD52D2129DDC28B009B7744 /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		FA633B6C297719840039B373 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA66C85C29780C3200C0352E /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 		FAB2E489889A420E6F695246 /* Pods-Nexflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nexflix.release.xcconfig"; path = "Target Support Files/Pods-Nexflix/Pods-Nexflix.release.xcconfig"; sourceTree = "<group>"; };
+		FAD52D1F29DD9EB3009B7744 /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
+		FAD52D2129DDC28B009B7744 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +134,6 @@
 				1FEF18F8BDA597473866AB35 /* Pods-Nexflix.debug.xcconfig */,
 				FAB2E489889A420E6F695246 /* Pods-Nexflix.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -246,6 +249,7 @@
 			children = (
 				FA633B3D29706C330039B373 /* Controllers */,
 				FA633B482971E7F40039B373 /* Sign In */,
+				FAD52D1C29DD95D5009B7744 /* Detail */,
 				FA633B65297701330039B373 /* Search */,
 				FA633B27297035A20039B373 /* Onboarding */,
 				FA633B12297005D10039B373 /* Components */,
@@ -329,6 +333,15 @@
 				FA633B68297707EE0039B373 /* SearchCoordinator.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		FAD52D1C29DD95D5009B7744 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FAD52D1F29DD9EB3009B7744 /* DetailScreenView.swift */,
+				FAD52D2129DDC28B009B7744 /* VideoView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +474,7 @@
 				FA633B1D29700F500039B373 /* AppCoordinator.swift in Sources */,
 				A1FD37E329840BCA007D7244 /* NetworkManager.swift in Sources */,
 				FA633B622975C1850039B373 /* String+Extensions.swift in Sources */,
+				FAD52D2229DDC28B009B7744 /* VideoView.swift in Sources */,
 				FA633B54297309620039B373 /* UIView+Extensions.swift in Sources */,
 				FA633B5C29732D980039B373 /* AppFonts.swift in Sources */,
 				FA633B6D297719840039B373 /* SearchTableViewCell.swift in Sources */,
@@ -476,6 +490,7 @@
 				FA633B602975712B0039B373 /* OnboardingViewModel.swift in Sources */,
 				FA633AFD296FFDA30039B373 /* Nexflix.xcdatamodeld in Sources */,
 				FA633B642975C1FA0039B373 /* UIImageView+Extensions.swift in Sources */,
+				FAD52D2029DD9EB3009B7744 /* DetailScreenView.swift in Sources */,
 				A1FD37E529840C32007D7244 /* HTTPURLResponse+Extensions.swift in Sources */,
 				A16D5D4429842A2D002657CC /* SearchManager.swift in Sources */,
 				FA633AF5296FFDA30039B373 /* SceneDelegate.swift in Sources */,

@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - NetworkManager
+
 enum EndPoint {
     static let search = "search/"
     static let titleDetails = "title/details/"

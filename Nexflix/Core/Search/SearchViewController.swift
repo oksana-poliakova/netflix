@@ -27,6 +27,8 @@ final class SearchViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
         return tableView
@@ -125,6 +127,7 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as? SearchTableViewCell else { return UITableViewCell() }
         cell.configureCell(model: movieItems[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
 }
