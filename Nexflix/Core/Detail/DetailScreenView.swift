@@ -10,10 +10,11 @@ import AVKit
 
 struct DetailScreenView: View {
     
-    
-    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VideoPlayerView()
+        // section 1
+        // section 2
+        
     }
 }
 
@@ -22,3 +23,5 @@ struct DetailScreenView_Previews: PreviewProvider {
         DetailScreenView()
     }
 }
+
+
