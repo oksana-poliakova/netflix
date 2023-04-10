@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Nexflix/Pods-Nexflix-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/Player/Player.framework
