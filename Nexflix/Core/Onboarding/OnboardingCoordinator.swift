@@ -35,8 +35,8 @@ final class OnboardingCoordinator: Coordinator {
 //            let coordinator = SignInCoordinator(navigationController: navigationController)
 //            let vc = SignInViewController(coordinator: coordinator)
             let manager = SearchManager(query: "stranger")
-            let coordinator = DetailCoordinator(navigationController: navigationController)
-            let vc = DetailViewController(coordinator: coordinator)
+            let coordinator = SearchCoordinator(navigationController: navigationController)
+            let vc = SearchViewController(coordinator: coordinator, manager: manager)
             navigationController.pushViewController(vc, animated: true)
         case .privacy:
             let vc = PrivacyViewController()

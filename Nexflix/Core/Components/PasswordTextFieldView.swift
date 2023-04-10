@@ -15,9 +15,6 @@ class PasswordTextFieldView: UIView {
         let textField = UITextField()
         textField.layer.cornerRadius = .cornerRadius
         textField.backgroundColor = AppColors.greyDark
-        textField.autocorrectionType = .no
-        textField.autocapitalizationType = .none
-        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -26,9 +23,7 @@ class PasswordTextFieldView: UIView {
         button.setTitle("SHOW", for: .normal)
         button.titleLabel?.font = AppFonts.regular.font
         button.setTitleColor(AppColors.grey, for: .normal)
-        button.addTarget(self,
-                         action: #selector(pressedShowButton),
-                         for: .touchUpInside)
+        button.addTarget(self, action: #selector(pressedShowButton), for: .touchUpInside)
         return button
     }()
 
