@@ -8,17 +8,18 @@
 import UIKit
 import SwiftUI
 
-class DetailScreenViewController: UIViewController {
+final class DetailScreenViewController: UIViewController {
     
     // MARK: - Properties
     
     private var coordinator: DetailScreenCoordinator
-    private let detailScreenView = DetailScreenView()
+    private let detailScreenView: DetailScreenView
     
     // MARK: - Init
     
-    init(coordinator: DetailScreenCoordinator) {
+    init(coordinator: DetailScreenCoordinator, model: Title) {
         self.coordinator = coordinator
+        self.detailScreenView = DetailScreenView(title: model)
         super.init(nibName: nil, bundle: nil)
     }
     

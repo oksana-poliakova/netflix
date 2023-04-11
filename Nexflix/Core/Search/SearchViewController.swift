@@ -95,7 +95,11 @@ final class SearchViewController: UIViewController {
 // MARK: - UITableViewDelegate
 
 extension SearchViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = movieItems[indexPath.row]
+        
+        coordinator.navigate(to: .next(model: item))
+    }
 }
 
 // MARK: - UITableViewDataSource

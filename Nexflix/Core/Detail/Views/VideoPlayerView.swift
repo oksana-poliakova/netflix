@@ -14,20 +14,10 @@ struct VideoPlayerView: View {
     
     var body: some View {
         VStack {
-            VideoPlayer(player: player, videoOverlay: {
-                VStack(alignment: .leading) {
-                    Text("Video name")
-                        .foregroundColor(.gray)
-                        .bold()
-                        .font(.title)
-                        .padding()
-                    Spacer()
-                }
-            })
+            VideoPlayer(player: player)
             .frame(
                 width: 400,
                 height: 300)
-            Spacer()
         }
     }
 }

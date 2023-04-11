@@ -29,11 +29,15 @@ struct JawSummary: Codable {
     let title: String
     let logoImage: LogoImage
     let backgroundImage: BackgroundImage
+    let description: String?
+    let releaseYear: Int?
 
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case logoImage = "logoImage"
         case backgroundImage = "backgroundImage"
+        case description = "synopsis"
+        case releaseYear = "releaseYear"
     }
 }
 

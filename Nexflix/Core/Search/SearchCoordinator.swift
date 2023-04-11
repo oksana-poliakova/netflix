@@ -12,7 +12,7 @@ final class SearchCoordinator: Coordinator {
     // MARK: - Enum
     
     enum Path {
-        case next
+        case next(model: Title)
     }
     
     // MARK: - Properties
@@ -28,6 +28,11 @@ final class SearchCoordinator: Coordinator {
     // MARK: - Functions
     
     func navigate(to step: Path) {
-        
+        switch step {
+        case .next(let model):
+            let coordinator = DetailScreenCoordinator(navigationController: navigationController)
+            let vc = DetailScreenViewController(coordinator: coordinator, model: model)
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
 }
